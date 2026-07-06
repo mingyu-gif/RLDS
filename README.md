@@ -73,3 +73,23 @@ Once built, the dataset can be loaded directly as a registered TFDS dataset (`ur
 - Frames are only kept once both a valid (non-zero) joint reading and a known gripper state have been observed, to avoid corrupting early frames of an episode.
 - Stage transitions are one-directional (`pick → place → return`) and driven by gripper open/close events, not by fixed frame counts.
 - The final action of each episode is set to a self-referential (stay) action, and `reward=1.0` is assigned to the terminal step.
+
+## Citation
+
+The RLDS schema and fine-tuning conventions used in this repository follow [OpenVLA](https://github.com/openvla/openvla) and [OpenVLA-OFT](https://github.com/moojink/openvla-oft). If you use this repository, please cite both (see `CITATIONS.bib`):
+
+```bibtex
+@article{kim2025fine,
+  title={Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success},
+  author={Kim, Moo Jin and Finn, Chelsea and Liang, Percy},
+  journal={arXiv preprint arXiv:2502.19645},
+  year={2025}
+}
+
+@article{kim24openvla,
+  title={OpenVLA: An Open-Source Vision-Language-Action Model},
+  author={Kim, Moo Jin and Pertsch, Karl and Karamcheti, Siddharth and Xiao, Ted and Balakrishna, Ashwin and Nair, Suraj and Rafailov, Rafael and Foster, Ethan and Sanketi, Pannag and Vuong, Quan and Kollar, Thomas and Burchfiel, Benjamin and Tedrake, Russ and Sadigh, Dorsa and Levine, Sergey and Liang, Percy and Finn, Chelsea},
+  journal={arXiv preprint arXiv:2406.09246},
+  year={2024}
+}
+```
