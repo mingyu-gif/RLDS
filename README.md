@@ -73,7 +73,3 @@ Once built, the dataset can be loaded directly as a registered TFDS dataset (`ur
 - Frames are only kept once both a valid (non-zero) joint reading and a known gripper state have been observed, to avoid corrupting early frames of an episode.
 - Stage transitions are one-directional (`pick → place → return`) and driven by gripper open/close events, not by fixed frame counts.
 - The final action of each episode is set to a self-referential (stay) action, and `reward=1.0` is assigned to the terminal step.
-
-## Citation
-
-See `CITATIONS.bib`.
